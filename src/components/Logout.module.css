@@ -1,0 +1,20 @@
+.logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 14rem);
+}
+
+.logout h2,
+.logout h4 {
+  text-align: center;
+  font-weight: 400;
+}
+
+.logout h2 {
+  font-size: 1.8rem;
+}
+.logout h4 {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}

@@ -14,10 +14,17 @@
 .sidebar-link {
   font-size: 0.9rem;
   font-weight: 700;
+  display: block;
   color: white;
   background: white;
   color: #002334;
+  text-decoration: none;
   text-transform: uppercase;
   padding: 0.8rem 1.2rem;
   margin-bottom: 0.4rem;
+  transition: background 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background: #ccd3d6;
 }
