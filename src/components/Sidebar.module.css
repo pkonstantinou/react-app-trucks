@@ -1,0 +1,23 @@
+.sidebar {
+  width: 14rem;
+  height: 100vh;
+  padding-top: 10rem;
+  background: #002334;
+}
+
+.sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: white;
+  background: white;
+  color: #002334;
+  text-transform: uppercase;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 0.4rem;
+}
