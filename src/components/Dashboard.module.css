@@ -1,0 +1,5 @@
+.dashboard {
+  width: calc(100% - 14rem);
+  overflow-y: scroll;
+  padding: 6rem 3rem;
+}
