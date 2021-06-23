@@ -12,9 +12,11 @@ const Dashboard = () => {
   }, [dispatch]);
 
   const trucks = useSelector((state) => state.trucks);
+  const isFetching = useSelector((state) => state.isFetching);
 
   return (
     <div className={classes.dashboard}>
+      {isFetching && <p>Fetching trucks...</p>}
       <ul>
         {trucks.map((truck) => (
           <li key={truck.uid}>{truck.title}</li>
