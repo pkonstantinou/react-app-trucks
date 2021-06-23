@@ -1,20 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTrucks } from '../actions/trucksActions';
+
 import classes from './Dashboard.module.css';
 
-const API_URL =
-  'https://truckoo-backend-aqkoiog6bq-ew.a.run.app/rest/v1/offers/active-offers';
-
 const Dashboard = () => {
-  const [trucks, setTrucks] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    axios
-      .get(API_URL, { headers: { 'accept-language': 'en-US' } })
-      .then((response) => {
-        setTrucks(response.data);
-      });
-  }, []);
+    dispatch(fetchTrucks());
+  }, [dispatch]);
+
+  const trucks = useSelector((state) => state.trucks);
 
   return (
     <div className={classes.dashboard}>
