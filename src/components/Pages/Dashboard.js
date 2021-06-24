@@ -19,21 +19,20 @@ const Dashboard = () => {
   return (
     <div className={classes.dashboard}>
       <Search />
-      {trucks[10] && (
-        <TruckItem
-          title={trucks[0].title}
-          imageUrl={trucks[0].vehicle_picture_front}
-          tags={trucks[0].tags}
-          sortCode={trucks[0].shortCode}
-          location={trucks[0].location}
-        />
-      )}
       {isFetching && <p>Fetching trucks...</p>}
-      <ul>
+      <div className={classes['truck-list']}>
         {trucks.map((truck) => (
-          <li key={truck.uid}>{truck.title}</li>
+          <TruckItem
+            title={truck.title}
+            imageUrl={truck.vehicle_picture_front}
+            tags={truck.tags}
+            sortCode={truck.shortCode}
+            location={truck.location}
+            askPrice={truck.askPrice}
+            bidPrice={truck.bidPrice}
+          />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

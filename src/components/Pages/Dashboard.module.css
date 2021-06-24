@@ -3,3 +3,12 @@
   overflow-y: scroll;
   padding: 6rem 3rem;
 }
+
+.truck-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1000px;
+}
