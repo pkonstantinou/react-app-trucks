@@ -25,10 +25,19 @@
   letter-spacing: 0.2px;
   color: #416a7e;
   margin-bottom: 0.6rem;
+  height: 1rem;
+  overflow: hidden;
+}
+
+.truck-tags-geo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 6.5rem;
 }
 
 .truck-tags {
-  height: 5.5rem;
+  overflow: hidden;
 }
 
 .truck-tag {
@@ -37,6 +46,7 @@
 }
 
 .truck-geo {
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
 }
@@ -58,4 +68,37 @@
 .truck-location__icon {
   margin-right: 0.3rem;
   font-size: 0.5rem;
+}
+
+.truck-prices {
+  height: 100%;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  color: #416a7e;
+}
+
+.truck-prices__ask,
+.truck-prices__bid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.truck-prices__ask {
+  font-weight: 200;
+  margin-bottom: 0.7rem;
+}
+
+.truck-prices__bid {
+  font-weight: 600;
+}
+
+.truck-prices__ask span:nth-of-type(1),
+.truck-prices__bid span:nth-of-type(1) {
+  font-size: 0.65rem;
+}
+
+.truck-prices__ask span:nth-of-type(2),
+.truck-prices__bid span:nth-of-type(2) {
+  font-size: 0.85rem;
 }
