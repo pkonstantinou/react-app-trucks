@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import Sidebar from './components/Sidebar';
-import Dashboard from './components/Dashboard';
+import Sidebar from './components/Layout/Sidebar';
+import Dashboard from './components/Pages/Dashboard';
 import Logout from './components/Logout';
 
 function App() {

@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchTrucks } from '../actions/trucksActions';
-import Search from './Search';
-import TruckItem from './Trucks/TruckItem';
+import { fetchTrucks } from '../../actions/trucksActions';
+import Search from '../Search';
+import TruckItem from '../Trucks/TruckItem';
 
 import classes from './Dashboard.module.css';
 
