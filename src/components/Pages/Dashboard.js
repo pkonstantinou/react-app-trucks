@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTrucks } from '../../actions/trucksActions';
 import Search from '../Search';
-import TruckItem from '../Trucks/TruckItem';
+import TruckList from '../Trucks/TruckList';
 
 import classes from './Dashboard.module.css';
 
@@ -20,19 +20,7 @@ const Dashboard = () => {
     <div className={classes.dashboard}>
       <Search />
       {isFetching && <p>Fetching trucks...</p>}
-      <div className={classes['truck-list']}>
-        {trucks.map((truck) => (
-          <TruckItem
-            title={truck.title}
-            imageUrl={truck.vehicle_picture_front}
-            tags={truck.tags}
-            sortCode={truck.shortCode}
-            location={truck.location}
-            askPrice={truck.askPrice}
-            bidPrice={truck.bidPrice}
-          />
-        ))}
-      </div>
+      <TruckList trucks={trucks} />
     </div>
   );
 };
