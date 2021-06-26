@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTrucks } from '../../actions/trucksActions';
-import Search from '../Search';
+import Container from '../UI/Container';
+import Toolbar from '../Widgets/Toolbar';
 import TruckList from '../Trucks/TruckList';
 
 import classes from './Dashboard.module.css';
@@ -18,9 +19,11 @@ const Dashboard = () => {
 
   return (
     <div className={classes.dashboard}>
-      <Search />
       {isFetching && <p>Fetching trucks...</p>}
-      <TruckList trucks={trucks} />
+      <Container>
+        <Toolbar className={classes['dashboard__toolbar']} />
+        <TruckList trucks={trucks} />
+      </Container>
     </div>
   );
 };

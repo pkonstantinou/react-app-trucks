@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Sidebar from './components/Layout/Sidebar';
 import Dashboard from './components/Pages/Dashboard';
-import Logout from './components/Logout';
+import Logout from './components/Pages/Logout';
 
 function App() {
   return (

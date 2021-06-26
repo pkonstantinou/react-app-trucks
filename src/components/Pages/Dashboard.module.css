@@ -1,5 +1,9 @@
 .dashboard {
   width: calc(100% - 14rem);
   overflow-y: scroll;
-  padding: 6rem 3rem;
+  padding: 4rem 3rem;
+}
+
+.dashboard__toolbar {
+  margin-bottom: 4rem;
 }
