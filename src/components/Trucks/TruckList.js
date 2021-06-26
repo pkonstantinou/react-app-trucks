@@ -8,6 +8,7 @@ const TruckList = (props) => {
     <div className={classes['truck-list']}>
       {props.trucks.map((truck) => (
         <TruckItem
+          key={truck.uid}
           title={truck.title}
           imageUrl={truck.vehicle_picture_front}
           tags={truck.tags}
