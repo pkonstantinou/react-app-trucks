@@ -19,6 +19,13 @@ const trucksReducer = (state = initState, action) => {
         searchedTrucks: action.payload.trucks
       };
 
+    case 'SORT_TRUCKS':
+      return {
+        ...state,
+        fetchedTrucks: action.payload.sortedFetched,
+        searchedTrucks: action.payload.sortedSearched
+      };
+
     default:
       return { ...state };
   }

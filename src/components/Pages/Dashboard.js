@@ -10,12 +10,12 @@ import classes from './Dashboard.module.css';
 const Dashboard = () => {
   const dispatch = useDispatch();
 
+  const trucks = useSelector((state) => state.searchedTrucks);
+  const isFetching = useSelector((state) => state.isFetching);
+
   useEffect(() => {
     dispatch(fetchTrucks());
   }, [dispatch]);
-
-  const trucks = useSelector((state) => state.searchedTrucks);
-  const isFetching = useSelector((state) => state.isFetching);
 
   return (
     <div className={classes.dashboard}>

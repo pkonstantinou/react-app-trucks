@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { sortTrucks } from '../../actions/trucksActions';
 import Dropdown from '../UI/Dropdown';
 
 import classes from './TruckSorter.module.css';
@@ -11,6 +13,7 @@ const options = [
 
 const TruckSorter = () => {
   const [orderedOptions, setOrderedOptions] = useState(options);
+  const dispatch = useDispatch();
 
   const getSelected = (id) => {
     return options.find((option) => option.id === id);
@@ -25,10 +28,13 @@ const TruckSorter = () => {
 
     switch (selectionId) {
       case 1:
+        dispatch(sortTrucks('date'));
         break;
       case 2:
+        dispatch(sortTrucks('asc'));
         break;
       case 3:
+        dispatch(sortTrucks('desc'));
         break;
       default:
         throw new Error('Unknow selection id on TruckSorter!');
