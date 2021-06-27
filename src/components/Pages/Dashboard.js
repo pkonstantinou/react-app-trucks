@@ -2,6 +2,7 @@ import React, { useEffect, Fragment } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTrucks } from '../../actions/trucksActions';
 import Container from '../UI/Container';
+import Spinner from '../UI/Spinner';
 import Toolbar from '../Widgets/Toolbar';
 import TruckList from '../Trucks/TruckList';
 
@@ -21,7 +22,7 @@ const Dashboard = () => {
     <div className={classes.dashboard}>
       <Container>
         {isFetching ? (
-          <p>Fetching trucks...</p>
+          <Spinner className={classes['dashboard__spinner']} />
         ) : (
           <Fragment>
             <Toolbar className={classes['dashboard__toolbar']} />
