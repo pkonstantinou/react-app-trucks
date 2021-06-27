@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTrucks } from '../../actions/trucksActions';
 import Container from '../UI/Container';
@@ -19,10 +19,15 @@ const Dashboard = () => {
 
   return (
     <div className={classes.dashboard}>
-      {isFetching && <p>Fetching trucks...</p>}
       <Container>
-        <Toolbar className={classes['dashboard__toolbar']} />
-        <TruckList trucks={trucks} />
+        {isFetching ? (
+          <p>Fetching trucks...</p>
+        ) : (
+          <Fragment>
+            <Toolbar className={classes['dashboard__toolbar']} />
+            <TruckList trucks={trucks} />
+          </Fragment>
+        )}
       </Container>
     </div>
   );
