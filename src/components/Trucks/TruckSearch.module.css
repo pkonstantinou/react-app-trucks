@@ -1,3 +1,10 @@
 .truck-search {
   width: 22rem;
 }
+
+@media (max-width: 1024px) {
+  .truck-search {
+    width: 60%;
+    min-width: 15rem;
+  }
+}

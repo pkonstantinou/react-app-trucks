@@ -4,3 +4,10 @@
   top: 0;
   width: 12rem;
 }
+
+@media (max-width: 1024px) {
+  .truck-sorter {
+    margin-top: 0.5rem;
+    position: initial;
+  }
+}
