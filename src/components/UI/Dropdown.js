@@ -4,17 +4,22 @@ import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 import classes from './Dropdown.module.css';
 
-const Dropdown = ({ options, onClick }) => {
+const Dropdown = ({ className, options, onClick }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleToggling = () => {
+  const handleClickOnSelected = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleClickOnUnSelected = (e) => {
+    onClick(e);
+    setIsOpen(false);
+  };
+
   return (
-    <ul className={classes.dropdown}>
+    <ul className={`${className} ${classes.dropdown}`}>
       <li
-        onClick={handleToggling}
+        onClick={handleClickOnSelected}
         className={classes['dropdown-item']}
         key={options[0].id}
       >
@@ -34,7 +39,7 @@ const Dropdown = ({ options, onClick }) => {
       {isOpen &&
         options.slice(1).map((option) => (
           <li
-            onClick={onClick}
+            onClick={handleClickOnUnSelected}
             className={classes['dropdown-item']}
             id={option.id}
             key={option.id}

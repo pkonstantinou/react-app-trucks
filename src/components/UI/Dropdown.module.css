@@ -17,6 +17,11 @@
   transition: all 0.3s ease;
 }
 
+.dropdown-item:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+}
+
 .dropdown-item:nth-of-type(2) {
   background: #f2f4f5;
 }
@@ -32,7 +37,6 @@
 
 .dropdown-item__icon {
   color: #002334;
-  margin-left: 1rem;
 }
 
 .dropdown-item:hover .dropdown-item__icon {

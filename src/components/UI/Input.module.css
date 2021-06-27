@@ -1,9 +1,10 @@
 .input {
   background: #e5e9ea;
   color: #002334;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.2px;
-  padding: 0.5rem;
+  letter-spacing: 0.4px;
+  padding: 0.8rem;
   border: 1px solid #002334;
   border-radius: 5px;
   outline: none;
