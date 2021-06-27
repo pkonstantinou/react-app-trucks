@@ -2,17 +2,23 @@ import axios from 'axios';
 import { allTrucksUrl } from '../api';
 
 export const fetchTrucks = () => async (dispatch) => {
-  try {
-    const { data } = await axios.get(allTrucksUrl, {
-      headers: { 'accept-language': 'en-US' }
-    });
+  let success = false;
 
-    dispatch({
-      type: 'FETCH_TRUCKS',
-      payload: { trucks: sortByPublishingDate(data) }
-    });
-  } catch (err) {
-    console.log(err, '\nFailed to fetch trucks!');
+  while (!success) {
+    try {
+      const { data } = await axios.get(allTrucksUrl, {
+        headers: { 'accept-language': 'en-US' }
+      });
+
+      success = true;
+
+      dispatch({
+        type: 'FETCH_TRUCKS',
+        payload: { trucks: sortByPublishingDate(data) }
+      });
+    } catch (err) {
+      console.log(err);
+    }
   }
 };
 
