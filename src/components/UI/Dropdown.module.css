@@ -17,16 +17,16 @@
   transition: all 0.3s ease;
 }
 
-.dropdown-item:nth-of-type(1) {
+.dropdown-item {
   display: flex;
   justify-content: space-between;
 }
 
-.dropdown-item:nth-of-type(2) {
+.dropdown-item:nth-of-type(3n + 2) {
   background: #f2f4f5;
 }
 
-.dropdown-item:nth-of-type(3) {
+.dropdown-item:nth-of-type(3n + 3) {
   background: #e5e9ea;
 }
 
