@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useOpen from '../../hooks/isOpen';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 import classes from './Dropdown.module.css';
 
 const Dropdown = ({ className, options, onClick }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [ref, isOpen, setIsOpen] = useOpen(false);
 
   const handleClickOnSelected = () => {
     setIsOpen(!isOpen);
@@ -17,7 +18,7 @@ const Dropdown = ({ className, options, onClick }) => {
   };
 
   return (
-    <ul className={`${className} ${classes.dropdown}`}>
+    <ul className={`${className} ${classes.dropdown}`} ref={ref}>
       <li
         onClick={handleClickOnSelected}
         className={classes['dropdown-item']}
