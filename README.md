@@ -14,3 +14,7 @@ To run the application you will need the following:
 - Inside the project directory run `yarn` in order to install all the dependencies.
 - Start the server with `REACT_APP_TRUCKS_URL=api-url-goes-here yarn start`
 - Navigate to `http://localhost:3000` to view the app
+
+## Deployment
+
+A deployed instance of the application can be found [here](https://react-app-trucks.vercel.app/).
